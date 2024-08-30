@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useState, useEffect } from 'react';
 import { AuthedUserContext } from '../../App';
 import './Dashboard.css';
 import Carousel from '../Carousel/carousel.jsx';
@@ -20,9 +20,26 @@ const imageData = [
 
 const Dashboard = () => {
   const user = useContext(AuthedUserContext);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+      // Toggle theme function
+      const toggleTheme = () => {
+        setIsDarkMode(!isDarkMode);
+    };
+
+    // Apply dark mode class to body
+    useEffect(() => {
+        document.body.classList.toggle('dark-mode', isDarkMode);
+    }, [isDarkMode]);
+
 
   return (
     <main className="content-wrapper">
+        <div className="header-container">
+           <h1>Welcome, {user.username}, to your film photo dashboard</h1>
+           <button onClick={toggleTheme} className="theme-toggle-button">
+                        {isDarkMode ? 'Light Mode' : 'Dark Mode'}
+                    </button>
+                    </div>
       <div className="box-container">
         <div className="description-box">
           <h2>Discover the Culinary Wonders of London</h2>
