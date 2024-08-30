@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f3e8cf; /* Same shade of yellow as the navbar */
+}
+
+.form-layout {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Align items vertically in the center */
+    padding: 20px;
+    padding-top: 120px; /* Padding to push content below the navbar */
+    gap: 10px; /* Reduce the space between form and image */
+}
+
+.form-container {
+    width: 55%; /* Adjust the width of the form container to match the image */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Align content to the center */
+    background-color: #0a3d62; /* Dark undertoned shade of blue for the background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+    color: white; /* White text color */
+}
+
+.image-container {
+    width: 55%; /* Adjust the width of the image container to match the form */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto; /* Allow the image container to size automatically */
+    border-radius: 8px;
+    overflow: hidden; /* Ensure the image doesn't overflow the container */
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire container */
+    border-radius: 8px; /* Match the border radius to the container */
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 16px;
+    color: white; /* White font color */
+    margin-bottom: 8px;
+    display: block;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    color: #333; /* Text color inside input fields */
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #a43e32; /* Darker red color for the button background */
+    font-style: #a43e32; /* White text */
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+

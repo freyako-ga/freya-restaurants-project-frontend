@@ -1,0 +1,103 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+  font-family: 'Lora', serif; /* Matching the general body font */
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Main Content Layout */
+.content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-top: 100px; /* Add margin to move content below the navbar */
+  min-height: calc(100vh - 120px); /* Adjust height to account for navbar */
+}
+
+/* Box Container */
+.box-container {
+  display: flex;
+  width: 90%; /* Adjust the width to fill more horizontal space */
+  gap: 20px;
+}
+
+/* Description Box */
+.description-box, .carousel-box {
+  flex: 1;
+  padding: 20px;
+  border: 4px solid #b22222; /* Same red as navbar */
+  background-color: #f7e6c3; /* Same yellow as the navbar */
+  height: 600px; /* Increase height to fill more vertical space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center the content vertically */
+  overflow-y: auto; /* Allow scrolling if the content overflows */
+}
+
+.description-box h2 {
+  margin-bottom: 10px;
+  font-size: 2.5rem; /* Larger font size */
+  font-family: 'Merriweather', serif; /* Font family to match the navbar title */
+  color: #b22222; /* Red color for the title */
+  text-align: center; /* Center the title */
+  text-transform: uppercase; /* Capitalize the title */
+}
+
+.description-box p {
+  margin-bottom: 10px;
+  text-align: center; /* Center the text in paragraphs */
+  font-size: 0.875rem; /* Smaller font size for paragraphs */
+  line-height: 1.4; /* Adjust line-height for better readability */
+  color: #333; /* Default text color */
+}
+
+/* Carousel Box */
+.carousel-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Carousel Styles */
+.carousel {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-slide {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .box-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .description-box, .carousel-box {
+    width: 100%;
+    height: auto; /* Allow the height to adjust automatically */
+  }
+}
