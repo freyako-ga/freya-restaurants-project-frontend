@@ -1,71 +1,70 @@
-/* Reset some default styling */
+
 body, html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Ensure the background color covers the entire page */
+
 body {
-    background-color: #f5e3c7; /* Adjust the color to match your theme */
-    min-height: 100vh; /* Ensure the background covers the full height */
+    background-color: #f5e3c7; 
+    min-height: 100vh; 
     display: flex;
     flex-direction: column;
 }
 
-/* Navbar styles */
+
 nav {
     position: sticky;
     top: 0;
     width: 100%;
-    background-color: #b22222; /* Set your desired navbar color */
-    z-index: 1000; /* Ensures the navbar stays on top */
-    height: 60px; /* Adjust height as needed */
+    background-color: #b22222; 
+    z-index: 1000; 
+    height: 60px;
 }
 
-/* Main content wrapper */
+
 .restaurant-list-wrapper {
-    padding-top: 80px; /* Add enough space to clear the navbar */
+    padding-top: 80px; 
     display: flex;
-    flex-grow: 1; /* Ensure the main content takes up remaining vertical space */
+    flex-grow: 1; 
 }
 
-/* Left side styling */
+
 .left-side {
-    flex: 2; /* Takes up more space */
+    flex: 2; 
     padding: 20px;
-    background-color: #f5e3c7; /* Ensure consistency in background color */
-    overflow-y: auto; /* Allows scrolling if content exceeds view height */
+    background-color: #f5e3c7; 
+    overflow-y: auto;
 }
 
-/* Right side styling */
+
 .right-side {
-    flex: 1; /* Takes up less space */
+    flex: 1; 
     padding: 20px;
-    background-color: #f5e3c7; /* Ensure consistency in background color */
+    background-color: #f5e3c7; 
 }
 
-/* Image and text container styles */
+
 .image-container img, .image-box img {
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 8px; /* Optional: to match the theme aesthetics */
+    border-radius: 8px; 
 }
 
 .listing-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* 2 columns layout */
-    gap: 20px; /* Space between the cards */
+    grid-template-columns: 1fr 1fr;
+    gap: 20px; 
 }
 
-/* Footer and text container */
 .listing-footer, .text-container header h2 {
     margin: 0;
     padding: 0;
 }
 
-/* Ensure the search bar and other content are properly aligned */
+
 .search-bar {
     margin-bottom: 20px;
     width: 100%;
@@ -73,10 +72,10 @@ nav {
     font-size: 16px;
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     .listing-grid {
-        grid-template-columns: 1fr; /* Single column layout for small screens */
+        grid-template-columns: 1fr; 
     }
 
     .restaurant-list-wrapper {

@@ -8,7 +8,7 @@ const SignupForm = (props) => {
   const [formData, setFormData] = useState({
     username: '',
     password: '',
-    email: '',  // Include email in form data
+    email: '',  
     password_confirmation: '',
   });
 
@@ -33,7 +33,7 @@ const SignupForm = (props) => {
 
   const { username, email, password, password_confirmation } = formData;
   const isFormInvalid = () => {
-    return !(username && email && password && password === password_confirmation);  // Include email in form validation
+    return !(username && email && password && password === password_confirmation);  
   };
 
   return (
@@ -52,7 +52,7 @@ const SignupForm = (props) => {
           />
         </div>
         <div>
-          <label htmlFor="email">Email:</label>  {/* New email input field */}
+          <label htmlFor="email">Email:</label>  
           <input
             type="email"
             id="email"

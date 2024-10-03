@@ -243,6 +243,7 @@
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import "./RestaurantList.css";
+import { index } from '../../services/restaurantService';
 
 const RestaurantList = () => {
     const [searchTerm, setSearchTerm] = useState('');
@@ -251,24 +252,18 @@ const RestaurantList = () => {
     useEffect(() => {
         const fetchRestaurants = async () => {
             try {
-                const response = await fetch("http://127.0.0.1:8000/restaurants/");
+                const response = await index()
 
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-
-                const data = await response.json();
-
-                if (Array.isArray(data)) {
-                    setFetchedRestaurants(data);
+                if (Array.isArray(response)) {
+                    setFetchedRestaurants(response);
                 } else {
                     console.error("Expected an array of restaurants, but got:", typeof data);
-                    setFetchedRestaurants([]);  // Fallback to an empty array
+                    setFetchedRestaurants([]);  
                 }
 
             } catch (error) {
                 console.error("Failed to fetch restaurants:", error);
-                setFetchedRestaurants([]);  // Fallback to an empty array
+                setFetchedRestaurants([]);  
             }
         };
 

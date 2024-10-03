@@ -61,7 +61,6 @@ export const create = async (formData) => {
     }
   };
 
-  
 
 
   export const deleteRestaurant = async (restaurantId) => {
