@@ -10,7 +10,7 @@ const getUser = () => {
 
 const signup = async (formData) => {
   try {
-    const res = await fetch(`${BACKEND_URL}auth/sign-up/`, {
+    const res = await fetch(`${BACKEND_URL}/auth/sign-up/`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData),
@@ -28,7 +28,7 @@ const signup = async (formData) => {
 
 const signin = async (user) => {
   try {
-    const res = await fetch(`${BACKEND_URL}auth/sign-in/`, {
+    const res = await fetch(`${BACKEND_URL}/auth/sign-in/`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(user),
